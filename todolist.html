@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="todolist.css" type="text/css" rel="stylesheet">
+</head>
+  <body>
+    <a href="index.html"><img src="img/list.png" class="list"><a>
+  <div class="main">
+  <div id= "myDIV" class="first">TO DO LIST</div>
+  <div id = "myDIV" class = "header" > 
+  <div class="add">
+    <input type="text" id="myInput" placeholder="Title">
+    <span onclick = "newElement()" class ="addBtn">Add</span></div> 
+    <ul id = "myUL" ></ul>
+    <script src="todolist.js"></script>
+  </div>
+    <div class="arrow">
+      <a href="memo.html"><img src="img/right-arrow.png" class="leftarrow"></a>
+      <a href="wordcloud.html"><img src="img/right-arrow.png" class="arrow"></a>
+    </div>
+    <!-- 메뉴바 -->
+    <div class="menubar"></div>
+    <div class="menulist">
+    <div class="circle"></div>
+    <a href="index.html" class="menu home">HOME</a>
+    <a href="canvas.html" class="menu addmemo">DRAWING</a>
+    <a href="memo.html" class="menu addmemo">MEMO</a>
+    <a href="todolist.html" class="menu list">TODOLIST</a>                  
+    <a href="wordcloud.html" class="menu wordcloud">WORDCLOUD</a>
+    <a href="pingpong.html" class="menu pingpong">PINGPONG</a>
+  </div>
+
+</body>
+</html>

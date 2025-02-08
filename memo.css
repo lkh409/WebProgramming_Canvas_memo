@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+body {
+  background-color: white;
+  /*font-family: "Humanbumsuk", "Ycomputer-Regular", "SF_IceMango"; 이거 있으나 없으나 코드 오류 없고,, 글씨도 됨,, 혹시 몰라 주석*/
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica
+              Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
+              Apple Chancery;
+}
+#text-editor {
+  width: 1200px;
+  height: 40px;
+  margin: auto;
+  padding: none;
+  background-color: rgb(102, 103, 171);
+  border: 1px solid rgb(255, 255, 255);
+  padding-bottom: 3px;
+}
+
+#buttons {
+  position: relative;
+  top:-4px;
+  padding: 10px;
+  /* border-radius: 10px 10px 0 0; */
+  margin-bottom: 0px;
+  margin-top: -3px;
+}
+
+#buttons > button {
+  border: none;
+  outline: none;
+  color: rgb(0,0,0); /*밑줄, 두껍게 얘네들 아이콘 색,, 뒤로가기애들은 해당 없음*/
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#buttons > button:hover,
+.img-icon:hover {
+  cursor: pointer;
+  background-color: rgb(180, 180, 207); /*아이콘에 마우스를 올려놓으면 변함*/
+}
+
+#editor {
+  outline: none;
+  width: 1200px; 
+  height: 500px;
+  padding: none;
+  margin: auto;
+  overflow: auto;
+  white-space: pre;
+  border: 2px solid rgb(31, 17, 42);
+  box-sizing: border-box;
+  background-color: white;
+  
+}
+
+.img-icon {
+  /*뒤로가기, 앞으로가기 꾸미기 설정 같음..*/
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 3px;
+  position: relative;
+  top:8px;
+  margin-bottom: 3px;
+  /* margin-bottom: 0px; */
+}
+
+#undoicon {
+  transform:rotate(90deg); 
+            -moz-transform: scaleX(-1); 
+            -o-transform: scaleX(-1); 
+            -webkit-transform: scaleX(-1); 
+            transform: scaleX(-1);   
+            filter: FlipH;
+            -ms-filter: "FlipH";
+}
+
+input[type="color"]:first-of-type {
+  margin-left: 10px;
+}
+
+input[type="color"],
+select {
+  border: none;
+  height: 20px;
+  outline: none;
+  border-radius: 2px;
+}
+
+@font-face {
+  font-family: "Humanbumsuk";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF_IceMango";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceMango.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ycomputer-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/Ycomputer-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+textarea {
+  font-family: "Ycomputer-Regular", "SF_IceMango", "Humanbumsuk";
+}
+
+input[type="color"]:hover,
+#fonts,
+#font-size,
+#font-format {
+  cursor: pointer;
+}
+
+#fonts {
+  margin-left: 8px; /*색깔칸과 글씨체설정칸 사이 간격*/
+}
+
+#font-size {
+  width: 50px; /*글씨 크기칸 가로넓이*/
+  font-size: 14px; /*글씨 크기 칸 안에 숫자 글씨크기*/
+}
+
+select {
+  text-align: center;
+  text-align-last: center;
+}
+/* 메뉴 햄버거 아이콘 */
+img.list {
+  width: 50px;
+  height: 50px;
+  padding: 25px;
+}
+
+/* 오른쪽 화살표 */
+img.arrow {
+  position: relative;
+  width: 50px;
+  padding: 25px;
+  left: 1100px;
+  top: -320px;
+}
+
+img.leftarrow {
+  /* 좌우반전 */
+  transform:rotate(90deg); 
+          -moz-transform: scaleX(-1); 
+          -o-transform: scaleX(-1); 
+          -webkit-transform: scaleX(-1); 
+          transform: scaleX(-1);   
+          filter: FlipH;
+          -ms-filter: "FlipH";
+  position: relative;
+  width: 50px;
+  padding: 25px;
+  left: -100px;
+  top: -320px;
+}
+
+/* 하단바 */
+.menubar {
+  margin: auto;
+  margin-top: 550px;
+  width: 1200px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid;
+  border-color: rgb(84, 43, 70);
+  border-radius: 10px;    
+}
+
+/* 하단바 원 */
+.circle {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: -23px;
+  left: 450px;
+}
+
+.menulist {
+  text-align: center;
+  margin: auto;
+  margin-top: 4px;
+  width: 1200px;
+}
+
+.menu {
+  text-decoration-line: none;
+  color: rgb(31, 17, 42);
+  letter-spacing :1px; /* 자간 조절 */
+  margin: 60px;
+  font-size: 15px;
+}
+

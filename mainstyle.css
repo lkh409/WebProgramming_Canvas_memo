@@ -1,0 +1,99 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica
+                Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
+                Apple Chancery;
+}
+body { background : rgb(255, 255, 255);}
+
+.bigbox {
+    margin: auto;
+    width: 1000px;
+    height: 350px;
+    /* padding-top : 40px; */
+    padding-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: rgb(102, 103, 171);
+}
+
+.smallbox {
+    margin: auto;
+    width: 550px;
+    height: 290px;
+    padding-bottom: 20px;
+    /* background-color: rgb(58, 52, 52); */
+}
+
+.link {
+    text-decoration-line: none;
+    color: rgb(255, 248, 241);
+    font-size: 40px;
+    letter-spacing :0px; /* 자간 조절 */
+    line-height: 45px;
+    font-family:'Apple Chancery';
+}
+
+/* 메뉴 햄버거 아이콘 */
+img.list {
+    width: 50px;
+    padding: 25px;
+}
+/* 오른쪽 화살표 */
+img.arrow {
+    position: relative;
+    width: 50px;
+    padding: 25px;
+    left: 1100px;
+    top: 215px;
+}
+
+/* 상자 안 작은 글씨 */
+.copyright {
+    text-align: center;
+    padding: 20px;
+    color: rgb(238, 238, 238);
+    font-size: 15px;
+    letter-spacing :3px; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 하단바 */
+.menubar {
+    margin: auto;
+    margin-top: 40px;
+    width: 1200px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid;
+    border-color: rgb(84, 43, 70);
+    border-radius: 10px;    
+}
+
+/* 하단바 원 */
+.circle {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -23px;
+    left: 80px;
+}
+
+.menulist {
+    text-align: center;
+    margin: auto;
+    margin-top: 4px;
+    width: 1200px;
+}
+
+.menu {
+    text-decoration-line: none;
+    color: rgb(31, 17, 42);
+    letter-spacing :1px; /* 자간 조절 */
+    margin: 60px;
+    font-size: 15px;
+}
+
+
+

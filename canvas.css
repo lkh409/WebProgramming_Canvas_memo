@@ -1,0 +1,359 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica
+    Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
+    Apple Chancery;}
+.body {
+  /* margin-top: -20px;  */
+  /* display: flex; */
+   justify-content: center;
+   background-color: rgb(255, 255, 255);
+}
+
+.container {
+  /* display: flex; */
+  margin: auto;
+  width:1200px;
+     height:50x;
+     border:0px solid  rgb(255, 255, 255);
+     background-color: rgb(255, 255, 255)
+     /* box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
+  /* gap: 10px; */
+  /* padding: 10px; */
+  /* max-width: 1050px; */
+}
+section {
+  background: rgb(255, 255, 255);
+  margin: auto;
+  border-radius: 0px;
+}
+.tools-board {
+  width: 1200px;
+  /* padding: 15px 22px 0; */
+}
+.tools-board .row {
+  margin-bottom: 10px;
+}
+.row .options {
+  list-style: none;
+  margin-top: 10px;
+}
+/* fill 버튼 */
+.row .options .option {
+  /* display: flex; */
+  cursor: pointer;
+  /* align-items: center; */
+  /* margin-bottom: 10px; */
+  /* margin-left: 10px; */
+}
+.option:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg)
+    brightness(100%) contrast(100%);
+}
+.option :where(span, label) {
+  color: #5a6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.option:is(:hover, .active) :where(span, label) {
+  color: rgb(102, 103, 171);
+}
+#fill-color {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+#fill-color:checked ~ label {
+  color: rgb(102, 103, 171);
+}
+.option #size-slider {
+  /* width: 100%; */
+  height: 5px;
+  margin-top: 10px;
+}
+.colors .options {
+  /* display: inline-block; */
+  float: left;
+  /* justify-content: space-between; */
+}
+.colors .option {
+  height: 20px;
+  width: 20px;
+  /* border-radius: 50%; */
+  margin-top: 10px;
+  /* position: relative; */
+  float: left;
+}
+.colors .option:nth-child(1) {
+  background-color:  rgb(237, 233, 230);
+  /* border: 1px solid #bfbfbf; */
+  margin-left: 3px;
+}
+.colors .option:nth-child(2) {
+  background-color: rgb(102, 103, 171);
+  margin-left: 3px;
+}
+.colors .option:nth-child(3) {
+  background-color: rgb(109, 90, 85);
+  margin-left: 3px;
+}
+.colors .option:nth-child(4) {
+  background-color: rgb(36, 36, 40);
+  margin-left: 3px;
+}
+.colors .option:nth-child(5) {
+  background-color:rgb(237, 233, 230);
+}
+/* .colors .option.selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+} */
+
+.colors .option:first-child.selected::before {
+  border-color: #ccc;
+}
+#color-picker {
+  /* opacity: 0; */
+  /* display: inline; */
+  margin-left: 5px;
+  cursor: pointer;
+}
+.buttons button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  /* font-size: 0.9rem; */
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.buttons .clear-canvas {
+  color: white;
+  border: 1px solid rgb(102, 103, 171);
+  /* transition: all 0.3s ease; */
+  background-color: rgb(102, 103, 171);
+  width: 100px;
+  position: relative;
+  left: 500px;
+}
+.clear-canvas:hover {
+  color: #fff;
+  background: rebeccapurple;
+}
+
+.row colors {
+  background-color: white;
+}
+
+.buttons .save-img {
+  background: rgb(102, 103, 171);
+  border: 1px solid #ffffff;
+  width: 100px;
+  position: relative;
+  left: 500px;
+}
+.save-img:hover {
+  color: #fff;
+  background: rebeccapurple;
+}
+.drawing-board {
+  flex: 1;
+  overflow: hidden;
+  margin: auto;
+}
+.drawing-board canvas {
+  width: 1200px;
+  height: 550px;
+  border-solid: 2px;
+  border-color: rgb(102, 103, 171) ;
+  margin: auto;
+}
+/* 메뉴 햄버거 아이콘 */
+img.list {
+  width: 50px;
+  height: 50px;
+  padding: 25px;
+}
+/* 오른쪽 화살표 */
+img.arrow {
+  position: relative;
+  width: 50px;
+  padding: 25px;
+  left: 1100px;
+  top: -350px;
+}
+
+img.leftarrow {
+  /* 좌우반전 */
+  transform:rotate(90deg); 
+          -moz-transform: scaleX(-1); 
+          -o-transform: scaleX(-1); 
+          -webkit-transform: scaleX(-1); 
+          transform: scaleX(-1);   
+          filter: FlipH;
+          -ms-filter: "FlipH";
+  position: relative;
+  width: 50px;
+  padding: 25px;
+  left: -100px;
+  top: -350px;
+}
+
+/* 하단바 */
+.menubar {
+  margin: auto;
+  margin-top: -80px;
+  width: 1200px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid;
+  border-color: rgb(0, 0, 0);
+  border-radius: 10px;    
+}
+
+/* 하단바 원 */
+.circle {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: -23px;
+  left: 275px;
+}
+
+.menulist {
+  text-align: center;
+  margin: auto;
+  margin-top: 4px;
+  width: 1200px;
+}
+
+.menu {
+  text-decoration-line: none;
+  color: rgb(31, 17, 42);
+  letter-spacing :1px; /* 자간 조절 */
+  margin: 60px;
+  font-size: 15px;
+}
+
+#rectangle{
+  all:unset;
+  padding:5px;
+  width: 50px;
+  text-align: center;
+  background-color:rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity linear .1s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+#circle {
+  all:unset;
+  padding:5px;
+  width: 50px;
+  text-align: center;
+  background-color:rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity linear .1s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+#triangle {
+  all:unset;
+  padding:5px;
+  width: 50px;
+  text-align: center;
+  background-color:rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity linear .1s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+}
+.options {
+  float: left;
+  margin-bottom: -15px;
+}
+
+canvas {
+  width:1200px;
+  height:500px;
+  border:2px solid  rgb(102, 103, 171);
+  background-color: white;
+  border-radius:0px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin: auto;
+}
+
+#color {
+  width: 50px;
+  height: 50px;
+}
+
+
+.color-options {
+  display: flex;
+  /* flex-direction: column; */
+  gap:5px;
+  align-items: center;
+}
+
+.color-option {
+ width:20px;
+ height: 20px;
+ /* border-radius: 50%; */
+ cursor: pointer;
+ border:1px solid white;
+ transition:transform ease-in-out .1s;
+ box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.color-option:hover {
+  transform: scale(1.2);
+}
+#size-slider {
+  position: relative;
+  top: -40px;
+  left: 140px;
+}
+
+#fill-color {
+  position: relative;
+  top: -50px;
+}
+
+#eraser {
+  position: relative;
+  top:-20px;
+  left: 50px;
+}
+
+#palate {
+  position: relative;
+  left: 130px;
+  top: -5px
+}
+#color-picker {
+  position: relative;
+  top:-2.5px;
+  left:3px;
+}

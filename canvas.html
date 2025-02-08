@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>canvas</title>
+    <link rel="stylesheet" href="canvas.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="canvas.js" defer></script>
+  </head>
+  <body>
+    <a href="index.html"><img src="img/list.png" class="list"><a></a>
+    <div class="container">
+      <section class="tools-board">
+        <div class="row">
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <span>사각형</span>
+            </li>
+            <li class="option tool" id="circle">
+              <span>원</span>
+            </li>
+            <li class="option tool" id="triangle">
+              <span>삼각형</span></li>
+            <li class="option">
+              <input type="checkbox" id="fill-color" />
+              <label for="fill-color" id="fill-color">Fill</label>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <img src="icons/brush.svg" alt="" />
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="icons/eraser.svg" alt="" />
+              <span>Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5" />
+            </li>
+          </ul>
+        </div>
+        <div class="row colors" id="palate">
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+            <div><input type="color" id="color-picker" value="#4A98F7" /></div>
+            </li>
+          </ul>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Clear</button>
+          <button class="save-img">Save</button>
+          <canvas></canvas>
+        </div>
+      <div class="drawing-board">
+        </div>
+      <a href="index.html"><img src="img/right-arrow.png" class="leftarrow"></a>
+      <a href="memo.html"><img src="img/right-arrow.png" class="arrow"></a>  
+    </div>
+    </div>
+    <!-- 메뉴바 -->
+    <div class="menubar"></div>
+    <div class="menulist">
+        <div class="circle"></div>
+        <a href="index.html" class="menu home">HOME</a>
+        <a href="canvas.html" class="menu addmemo">DRAWING</a>
+        <a href="memo.html" class="menu addmemo">MEMO</a>
+        <a href="todolist.html" class="menu list">TODOLIST</a>                  
+        <a href="wordcloud.html" class="menu wordcloud">WORDCLOUD</a>
+        <a href="pingpong.html" class="menu pingpong">PINGPONG</a>
+    </div>
+    </div>
+  </body>
+</html>

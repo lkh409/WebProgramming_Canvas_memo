@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="memo.css" />
+    <title>Rich Text Editor</title>
+  </head>
+  <body>
+    <a href="index.html"><img src="img/list.png" class="list"><a>
+    <div id="text-editor">
+      <!-- Buttons -->
+      <div id="buttons">
+        <!-- Functions 글씨 두껍게, 기울기, 밑줄, 줄긋기 -->
+        <button type="button" title="Bold" onclick="execute('bold')"><b>B</b></button>
+        <button type="button" title="Italic" onclick="execute('italic')"><em><b>I</b></em></button>
+        <button type="button" title="Underline" onclick="execute('underline')"><u><b>U</b></u></button>
+        <button type="button" title="Strike through" onclick="execute('strikethrough')"><s><b>S</b></s></button>
+        <!-- 글씨색 -->
+        <input type="color" value="#ffffff" title="Text color" onchange="execute('forecolor', this.value)">
+        <!--형광팬-->
+        <input type="color" value="#111111" title="Background color" onchange="execute('backcolor', this.value)">
+        <!-- 폰트들,, 영어 이름은 영문폰트만 한글은 영어, 한글 둘다 가능!-->
+        <select id="fonts"
+          onchange="execute('fontname', this.options[this.selectedIndex].value)"
+          title="Fonts">
+          <option value="Helvetica">Helvetica</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Lucida Console">Lucida Console</option>
+          <option value="Ycomputer-Regular">요컴퓨터-R</option>
+          <option value="SF_IceMango">아이스 망고</option>
+          <option value="Humanbumsuk">휴먼 범석</option>
+        </select>
+
+        <!-- Font size -->
+        <select id="font-size"
+          onchange="execute('fontsize', this.options[this.selectedIndex].value)"
+          title="Font size">
+          <script>
+            for (let n = 1; n <= 7; n++) { document.write(`<option value="${n}">${n}</option>`);
+            }
+          </script>
+        </select>
+
+        <!-- Font format -->
+        <select id="font-format"
+          onchange="execute('formatblock', this.options[this.selectedIndex].value)"
+          title="Font format">
+          <option value="p">Normal</option>
+          <option value="h1">Heading 1</option>
+          <option value="h2">Heading 2</option>
+          <option value="h3">Heading 3</option>
+          <option value="h4">Heading 4</option>
+          <option value="h5">Heading 5</option>
+          <option value="h6">Heading 6</option>
+        </select>
+
+        <!-- 뒤로 / 앞으로 -->
+        <img src="/img/right-arrow.png" class="img-icon" id="undoicon" title="Undo" onclick="execute('undo')">
+        <img src="/img/right-arrow.png" class="img-icon" title="Redo" onclick="execute('redo')">
+      </div>
+        <!-- Rich text editor -->
+      <div id="editor" contenteditable="true"></div>
+      <a href="canvas.html"><img src="img/right-arrow.png" class="leftarrow"></a>
+      <a href="todolist.html"><img src="img/right-arrow.png" class="arrow"></a>
+    </div>
+    </div>
+    <!-- 메뉴바 -->
+    <div class="menubar"></div>
+      <div class="menulist">
+        <div class="circle"></div>
+        <a href="index.html" class="menu home">HOME</a>
+        <a href="canvas.html" class="menu addmemo">DRAWING</a>
+        <a href="memo.html" class="menu addmemo">MEMO</a>
+        <a href="todolist.html" class="menu list">TODOLIST</a>                  
+        <a href="wordcloud.html" class="menu wordcloud">WORDCLOUD</a>
+        <a href="pingpong.html" class="menu pingpong">PINGPONG</a>
+      </div>
+    <script src="memo.js"></script>
+    </body>
+  </body>
+</html>
